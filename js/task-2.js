@@ -22,13 +22,16 @@ const images = [
   {
     url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
     alt: "Lighthouse Coast Sea",
-  }
+  },
 ];
-const list = document.querySelector('.gallery');
-list.style.display = 'flex';
-list.style.flexWrap = 'wrap';
+const list = document.querySelector(".gallery");
+list.style.display = "flex";
+list.style.flexWrap = "wrap";
 
-const markup = images.map((image) => `<li class="galaryimg"><img src="${image.url}" width=300 alt="${image.alt}"></li>`);
-const htmlString = markup.join('');
+const markup = images.map(
+  (image) =>
+    `<li class="galaryimg"><img src="${image.url}" width=300 alt="${image.alt}"></li>`
+);
+const htmlString = markup.join("");
 
 list.innerHTML = htmlString;

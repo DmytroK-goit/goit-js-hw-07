@@ -1,11 +1,11 @@
-const bgColGenegate = document.querySelector('.widget')
-
+const bgColGenegate = document.querySelector(".widget");
+const body = document.body;
 const changeColor = document.querySelector(".change-color");
 const outputColor = document.querySelector(".color");
 
 changeColor.addEventListener("click", () => {
   const newColor = getRandomHexColor();
-  bgColGenegate.style.backgroundColor = newColor;
+  body.style.backgroundColor = newColor;
   outputColor.textContent = newColor;
 });
 
@@ -14,5 +14,3 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
-
